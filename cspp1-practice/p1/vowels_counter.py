@@ -2,6 +2,7 @@
 Author : Khyathi Cheedalla
 Date: 2-8-16
 '''
+
 def main():
     '''
         This function is used to find the vowels in the given string
@@ -14,6 +15,6 @@ def main():
     
     print(co_unt)
 
-if __name__ == __"main"__:
+if __name__ == "__main__":
     main()
   
