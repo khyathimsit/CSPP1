@@ -5,12 +5,15 @@ Date: 2-8-16
 
 '''
 def main():
-	 ST_R = input()
-	 CO_UNT = 0
-	 for ch_ar in ST_R:
-		     if CH_AR == 'a' or CH_AR == 'e' or CH_AR == 'i' or CH_AR == 'o' or CH_AR == 'u':
-             CO_UNT += 1
-     print(CO_UNT)
- if __name__== "__main__":
-	main()
+    '''
+       This function is used to find the vowels in the given string
+    '''
+    st_r = input()
+    co_unt = 0
+    for cha_r in st_r:
+        if cha_r in ('a', 'e', 'i', 'o', 'u'):
+            co_unt += 1
+    print(co_unt)
+    if __name__ == "main":
+        main()
   
