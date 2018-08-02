@@ -14,7 +14,7 @@ def main():
     f_max = 0
     f_cnt = 0
     fs = s_1[0]
-    for i in range(0, n-1, 1):
+    for i in range(0, n-1):
         if ord(s_1[i]) <= ord(s_1[i+1]):
         	f_cnt += 1
         	fs = fs + s_1[i+1]
