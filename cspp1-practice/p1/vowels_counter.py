@@ -14,6 +14,7 @@ def main():
         if cha_r in ('a', 'e', 'i', 'o', 'u'):
             co_unt += 1
     print(co_unt)
-    if __name__ == "main":
-        main()
+
+if __name__ == "main":
+    main()
   
