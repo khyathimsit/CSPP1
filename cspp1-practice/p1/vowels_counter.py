@@ -12,7 +12,6 @@ def main():
     for cha_r in st_r:
         if cha_r in ('a', 'e', 'i', 'o', 'u'):
             co_unt += 1
-    
     print(co_unt)
 
 if __name__ == "__main__":
