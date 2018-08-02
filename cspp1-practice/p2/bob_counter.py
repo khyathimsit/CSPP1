@@ -4,7 +4,7 @@
 '''
 
 def main():
-    # This code prints the number of times that bob occured in the given string
+    ''' This code prints the number of times that bob occured in the given string'''
     s_1 = input()
     co_unt = 0
     for i in range(0,len(s_1)-2):
@@ -12,6 +12,6 @@ def main():
             co_unt += 1
     print(co_unt)
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
     
