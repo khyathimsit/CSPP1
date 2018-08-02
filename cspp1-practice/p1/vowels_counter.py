@@ -1,8 +1,6 @@
 '''
 Author : Khyathi Cheedalla
-
 Date: 2-8-16
-
 '''
 def main():
     '''
@@ -16,6 +14,6 @@ def main():
     
     print(co_unt)
 
-if __name__ == "main":
+if __name__ == __"main"__:
     main()
   
