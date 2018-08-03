@@ -11,7 +11,6 @@ def main():
     if ans**3 != int(x_1):
         print(str(x_1) + ' is not a perfect cube')
     else:
-        print('Cube root of ' + str(x_1) + ' is ' + str(ans))
-
+        print(ans)
 if __name__ == "__main__":
     main()
