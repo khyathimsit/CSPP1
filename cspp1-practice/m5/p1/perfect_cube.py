@@ -9,8 +9,8 @@ def main():
     while ans**3 < int(x_1):
         ans = ans + 1
     if ans**3 == int(x_1):
-        print(str(x_1) + ' is not a perfect cube')
+        print(str(x_1) + ' is a perfect cube')
     else:
-        print(ans)
+        print(str(x_1) + ' is not a perfect cube')
 if __name__ == "__main__":
     main()
