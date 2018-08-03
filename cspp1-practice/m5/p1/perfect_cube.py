@@ -4,7 +4,7 @@ Author: khyathi
 
 def main():
     '''to find whether the given number is perfect cube or not'''
-    x_1 = int(input('Enter an integer: '))
+    x_1 = input()
     ans = 0
     while ans**3 < x_1:
         ans = ans + 1
