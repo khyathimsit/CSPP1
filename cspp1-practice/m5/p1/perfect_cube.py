@@ -8,7 +8,7 @@ def main():
     ans = 0
     while ans**3 < int(x_1):
         ans = ans + 1
-    if ans**3 != int(x_1):
+    if ans**3 == int(x_1):
         print(str(x_1) + ' is not a perfect cube')
     else:
         print(ans)
