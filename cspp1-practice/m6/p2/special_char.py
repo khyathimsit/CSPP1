@@ -8,7 +8,7 @@ def main():
     This code is used to replace all the special characters with a space
     '''
     str_input = input()
-    for i in range(0, len(str_input)):
+    for char in str_input:
         if char in ('!', '@', '#', '$', '%', '^', '*'):
             str_input.append(" ")
         print(str_input)
