@@ -1,5 +1,5 @@
 '''
-Autho : Khyathi
+Author : Khyathi
 '''
 def main():
     '''
@@ -8,7 +8,7 @@ def main():
     n = int(input())
     i = 0
     p = 1
-    for i in range(str(n)):
+    for i in range(n):
         x = n % 10
         p = p * x
         y = n // 10
