@@ -12,7 +12,7 @@ def main():
         n = n // 10
         p = p * a
     print(p)
-    if n == 0:
-        print("0")
+    #if n == 0:
+        #print("0")
 if __name__ == "__main__":
     main()
