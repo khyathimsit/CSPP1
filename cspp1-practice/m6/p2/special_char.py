@@ -11,8 +11,8 @@ def main():
     str_2 = ''
     for char in str_input:
         if char in "!@#$%^*":
-            str_2.append(" ")
+            str_2 += " "
         else:
-            str_2.append(char)
+            str_2 += char
 if __name__ == "__main__":
     main()
