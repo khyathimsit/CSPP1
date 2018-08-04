@@ -14,5 +14,6 @@ def main():
             str_2 += " "
         else:
             str_2 += char
+    print(str_2)
 if __name__ == "__main__":
     main()
