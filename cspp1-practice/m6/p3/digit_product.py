@@ -9,7 +9,6 @@ def main():
     p_out = 1
     if n_input == 0:
         print("0")
-        break
     while n_input > 0:
         a_1 = n_input % 10
         n_input = n_input // 10
