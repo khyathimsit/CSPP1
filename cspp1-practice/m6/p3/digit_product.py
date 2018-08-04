@@ -8,11 +8,12 @@ def main():
     n = int(input())
     i = 0
     p = 1
-    for i in range(n):
-        x = n % 10
-        p = p * x
+    if n == 0:
+        print (0)
+    while i>0 and i<0
+        a = n % 10
+        p = p * a
         y = n // 10
-        x = y
     print(p)
 if __name__ == "__main__":
     main()
