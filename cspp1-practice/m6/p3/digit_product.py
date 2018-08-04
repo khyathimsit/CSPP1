@@ -9,7 +9,7 @@ def main():
     p_out = 1
     if n_input == 0:
         print("0")
-    while n_input > 0:
+    while n_input != 0:
         a_1 = n_input % 10
         n_input = n_input // 10
         p_out = p_out * a_1
