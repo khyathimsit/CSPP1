@@ -7,7 +7,7 @@ def main():
     '''
     n = int(input())
     p = 1
-    while i > 0
+    while i != 0
         a = n % 10
         p = p * a
         y = n // 10
