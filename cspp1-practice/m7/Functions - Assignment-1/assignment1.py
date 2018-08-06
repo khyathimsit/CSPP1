@@ -9,9 +9,6 @@ def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
     i = 1
     '''
         The following variables contain values as described below:
-        # balance - the outstanding balance on the credit card
-        # annualInterestRate - annual interest rate as a decimal
-        # monthlyPaymentRate - minimum monthly payment rate as a decimal
     '''
     balance_copy = balance
     while i <= 12:
