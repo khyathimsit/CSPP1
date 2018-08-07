@@ -15,12 +15,10 @@ def sumofdigits(n_val):
     '''
     if n_val == 0:
         return n_val
-    return ((n_val%10) + sumofdigits(n_val//10))
+    return (n_val%10) + sumofdigits(n_val//10)
 def main():
     ''' main function'''
     a_1 = input()
-    print(sumofdigits(int(a_1)))  
-
+    print(sumofdigits(int(a_1)))
 if __name__ == "__main__":
     main()
-
