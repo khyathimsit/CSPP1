@@ -9,16 +9,16 @@ that takes in one number and returns the factorial of given number.
 
 def factorial(num_value):
     '''
-    n is positive Integer
+    num_value is positive Integer
 
     returns: a positive integer, the factorial of n.
     '''
     if num_value <= 1:
         return 1
     else:
-        return num_value*factorial(num_value-1)
+        return num_value * factorial(num_value-1)
     def main():
-    a_number = input()
-    print(factorial(int(a_number)))    
+    a_1 = input()
+    print(factorial(int(a_1)))    
 if __name__ == "__main__":
     main()
