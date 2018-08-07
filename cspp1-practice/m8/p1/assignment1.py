@@ -17,7 +17,7 @@ def factorial(num_value):
         return 1
     else:
         return num_value * factorial(num_value-1)
-    def main():
+def main():
     a = input()
     print(factorial(int(a)))    
 if __name__ == "__main__":
