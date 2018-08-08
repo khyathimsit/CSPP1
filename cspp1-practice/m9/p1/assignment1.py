@@ -23,12 +23,14 @@ def is_word_guessed(secret_word, letters_guessed):
         if i in temp[0:i]:
             temp = letters_guessed[:]
         else:
-            for j in range(0, len(sw)):
-                if sw[j] == letters_guessed[i]:
-                    count = count+1
-    if (count == len(sw)):
-        return True
-    return False
+                if letters_guessed[i] in sw:
+                    count = count + sw.count(letters_guessed[i])
+                if (count == len(sw)):
+                    return True
+
+    if count < len(sw):
+        return False    
+    return "0"
 
         
 
