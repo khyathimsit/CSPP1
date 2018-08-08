@@ -23,7 +23,7 @@ def is_word_guessed(secret_word, letters_guessed):
         if i in temp[0:i]:
             temp = letters_guessed[:]
         else:
-            for j in range(0, len(sw)-1):
+            for j in range(0, len(sw)):
                 if sw[j] == letters_guessed[i]:
                     count = count+1
     if (count == len(sw)):
