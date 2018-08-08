@@ -16,16 +16,19 @@ def is_word_guessed(secret_word, letters_guessed):
     # FILL IN YOUR CODE HERE...
     count = 0
     sw = list(secret_word)
-    if letters_guessed == []:
-        return False
-    for i in range(0, len(letters_guessed)):
-        for j in range(0, len(sw)-1):
-            if sw[j] == letters_guessed[i]:
-                count = count+1
-    if (count == len(sw)-1):
+    temp = letters_guessed[:]
+    if sw == []:
         return True
-    else:
-        return False
+    for i in range(0, len(letters_guessed)):
+        if i in temp[0:i]:
+            temp = letters_guessed[:]
+        else:
+            for j in range(0, len(sw)-1):
+                if sw[j] == letters_guessed[i]:
+                    count = count+1
+    if (count == len(sw)):
+        return True
+    return False
 
         
 
