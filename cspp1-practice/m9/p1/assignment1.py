@@ -13,21 +13,21 @@ def is_word_guessed(secret_word, letters_guessed):
       False otherwise
     '''
     count = 0
-    sw = list(secret_word)
+    secretword_list = list(secret_word)
     temp = letters_guessed[:]
-    if sw == []:
+    if secretword_list == []:
         return True
     for i in range(0, len(letters_guessed)):
         if i in temp[0:i]:
             temp = letters_guessed[:]
         else:
-            if letters_guessed[i] in sw:
-                count = count + sw.count(letters_guessed[i])
-                if (count == len(sw)):
+            if letters_guessed[i] in secretword_list:
+                count = count + secretword_list.count(letters_guessed[i])
+                if count == len(secretword_list):
                     return True
 
-    if count < len(sw):
-        return False    
+    if count < len(secretword_list):
+        return False
     return "0"
 
 def main():
