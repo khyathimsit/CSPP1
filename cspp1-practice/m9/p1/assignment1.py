@@ -28,7 +28,7 @@ def is_word_guessed(secret_word, letters_guessed):
                     count = count+1
     if (count == len(sw)):
         return True
-    return True
+    return False
 
         
 
