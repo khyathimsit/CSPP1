@@ -1,5 +1,5 @@
 '''
-Exercise : Assignment-1
+Author : Khyathi
 implement the function get_available_letters that takes in one parameter -
 a list of letters, letters_guessed. This function returns a string
 that is comprised of lowercase English letters - all lowercase English letters
@@ -13,14 +13,14 @@ def get_available_letters(letters_guessed):
       yet been guessed.
     '''
     import string
-    st = list(string.ascii_lowercase)
+    list_alpha = list(string.ascii_lowercase)
     empty_str = []
     for i in letters_guessed:
-        if i in st:
-            st.remove(i)
+        if i in list_alpha:
+            list_alpha.remove(i)
         else:
             empty_str.append(i)
-    return ''.join(st)
+    return ''.join(list_alpha)
 
 
 
