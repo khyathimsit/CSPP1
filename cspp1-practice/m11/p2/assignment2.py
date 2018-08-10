@@ -33,7 +33,7 @@ def main():
     for i_val in range(int(n_1)):
         data = input()
         l_val = data.split()
-        adict[l[0]] = int(l_val[1])
+        adict[l_val[0]] = int(l_val[1])
         i_val += 1
     data1 = input()
     print(update_hand(adict, data1))
