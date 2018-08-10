@@ -7,7 +7,7 @@ def update_hand(hand, word):
     Assumes that 'hand' has all the letters in word.
     In other words, this assumes that however many times
     a letter appears in 'word', 'hand' has at least as
-    many of that letter in it. 
+    many of that letter in it.
     """
     # TO DO ... <-- Remove this comment when you code this function
     for val_ue in word:
