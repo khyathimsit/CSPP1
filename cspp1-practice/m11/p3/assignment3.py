@@ -9,7 +9,7 @@ def is_valid_word(wo_rd, ha_nd, word_list):
     composed of letters in the hand. Otherwise, returns False.
 
     Does not mutate hand or wordList.
-   
+
     word: string
     hand: dictionary (string -> int)
     wordList: list of lowercase strings
@@ -26,10 +26,9 @@ def is_valid_word(wo_rd, ha_nd, word_list):
             return True
         return False
     return False
-    
-
 
 def main():
+    '''main function'''
     wo_rd = input()
     num_n = int(input())
     a_dict = {}
@@ -37,7 +36,8 @@ def main():
         data = input()
         l_1 = data.split()
         a_dict[l_1[0]] = int(l_1[1])
-    l_2=input().split()
+        i += 1
+    l_2 = input().split()
     print(is_valid_word(wo_rd, a_dict, l_2))
 
 if __name__ == "__main__":
