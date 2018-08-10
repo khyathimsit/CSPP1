@@ -2,7 +2,7 @@
 #Exercise: Assignment-2
 Author : Khyathi
 '''
-def updateHand(hand, word):
+def update_hand(hand, word):
     """
     Assumes that 'hand' has all the letters in word.
     In other words, this assumes that however many times
@@ -25,15 +25,18 @@ def updateHand(hand, word):
     return hand
 
 def main():
+    '''
+        Main function
+    '''
     n_1 = input()
     adict = {}
-    for i in range(int(n_1)):
+    for i_val in range(int(n_1)):
         data = input()
-        l = data.split()
-        adict[l[0]] = int(l[1])
-        i += 1
+        l_val = data.split()
+        adict[l[0]] = int(l_val[1])
+        i_val += 1
     data1 = input()
-    print(updateHand(adict, data1))
+    print(update_hand(adict, data1))
         
 if __name__ == "__main__":
     main()
