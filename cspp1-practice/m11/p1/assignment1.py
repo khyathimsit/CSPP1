@@ -3,7 +3,7 @@ Exercise: Assignment-1
 Author : Khyathi
 '''
 
-def get_word_score(word, n):
+def get_word_score(word, nu_m):
     """
     Returns the score for a word. Assumes the word is a valid word.
 
@@ -24,17 +24,14 @@ def get_word_score(word, n):
         'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,
         's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10}
 
-    sum = 0
+    sum_value = 0
     length_word = len(word)
     for key_1 in word:
-        sum += scrabble_letter_values[key_1]
-    key_1 = sum*length_word
-    if n == length_word:
+        sum_value += scrabble_letter_values[key_1]
+    key_1 = sum_value*length_word
+    if nu_m == length_word:
         key_1 += 50
     return key_1
-    
-
-
 def main():
     '''
     Main function for the given problem
