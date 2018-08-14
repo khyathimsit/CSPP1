@@ -4,22 +4,23 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 def func(card):
-	card_val = 0
-	if card[0] == 'T':
-		card_val = 10
-	elif card[0] == 'J':
-		card_val = 11
-	elif card[0] == 'Q':
-		card_val = 12
-	elif card[0] == 'K':
-		card_val = 13
-	elif card[0] == 'A':
-		card_val = 14
-	else:
-		card_val = int(card[0])
-	return card_val
-
-
+    '''
+    Function to assign num values to j,k and q
+    '''
+    card_val = 0
+    if card[0] == 'T':
+        card_val = 10
+    elif card[0] == 'J':
+        card_val = 11
+    elif card[0] == 'Q':
+        card_val = 12
+    elif card[0] == 'K':
+        card_val = 13
+    elif card[0] == 'A':
+        card_val = 14
+    else:
+        card_val = int(card[0])
+    return card_val
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -30,13 +31,11 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    hand_1 = sorted(hand, key = func)
+    hand_1 = sorted(hand, key=func)
     for i in range(len(hand)-1):
-    	if func(hand_1[i+1]) - func(hand_1[i]) != 1:
-    		return False
+        if func(hand_1[i+1]) - func(hand_1[i]) != 1:
+            return False
     return True
-
-    
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
@@ -51,24 +50,26 @@ def is_flush(hand):
     count_c = 0
     count_h = 0
     for i in hand:
-    	if i[1] == 'D':
-    		count_d += 1
-    	elif i[1] == 'S':
-    		count_s += 1
-    	elif i[1] == 'C':
-    		count_c += 1
-    	elif i[1] == 'H':
-    		count_h += 1
-    	else:
-    		print("Not a suit")
+        if i[1] == 'D':
+            count_d += 1
+        elif i[1] == 'S':
+            count_s += 1
+        elif i[1] == 'C':
+            count_c += 1
+        elif i[1] == 'H':
+            count_h += 1
+        else:
+            print("Not a suit")
     if count_d == 5 or count_s == 5 or count_c == 5 or count_h == 5:
-    	return True
-    else:
-    	return False
+        return True
+    return False
 def is_straightflush(hand):
-	if is_straight(hand) and is_flush(hand):
-		return True
-	return False
+    '''
+    Function to see whether the given hand is both flush and straight
+    '''
+    if is_straight(hand) and is_flush(hand):
+        return True
+    return False
 
 def hand_rank(hand):
     '''
@@ -95,13 +96,13 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     rank = 0
     if is_straightflush(hand):
-    	rank = 3 * func(max(hand, key = func))
-    elif is_straightflush(hand):
-    	rank = 2 * func(max(hand, key = func))
-    elif is_straightflush(hand):
-    	rank = 1 * func(max(hand, key = func))
+        rank = 3 * func(max(hand, key=func))
+    elif is_flush(hand):
+        rank = 2 * func(max(hand, key=func))
+    elif is_straight(hand):
+        rank = 1 * func(max(hand, key=func))
     else:
-    	rank = 0
+        rank = 0
     return rank
 
 def poker(hands):
