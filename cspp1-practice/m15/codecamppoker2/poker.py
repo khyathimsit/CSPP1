@@ -35,7 +35,7 @@ def is_four(hand):
     for f in set_val:
         if hand_values.count(f) == 4:
             return True
-    return False 
+    return False
 
 def is_three(hand):
     # count = 1
@@ -57,7 +57,7 @@ def is_three(hand):
     for f in set_val:
         if hand_values.count(f) == 3:
             return True
-    return False 
+    return False
 
 def is_onepair(hand):
     hand_values = [f for f, s in hand]
@@ -75,7 +75,7 @@ def is_full(hand):
     for f in set_val:
         if hand_values.count(set_val) == 3:
             return True
-    return False 
+    return False
 
 def is_twopair(hand):
     hand_values = [f for f, s in hand]
@@ -84,7 +84,7 @@ def is_twopair(hand):
     if len(twopairs) != 2:
         return False
     return True
-            
+
 def hand_rank(hand):
     if is_straight(hand) and is_flush(hand):
         return 8
@@ -105,7 +105,6 @@ def hand_rank(hand):
     return 0
 
 def poker(hands):
-    
     return max(hands, key=hand_rank)
 
 if __name__ == "__main__":
