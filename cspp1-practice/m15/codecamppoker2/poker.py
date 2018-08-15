@@ -14,7 +14,7 @@ def is_flush(hand):
     for i in hand:
         values_set.add(i[1])
     return len(values_set) == 1
-    
+
 def is_four(hand):
     # count = 1
     # stng_values = "--23456789TJQKA"
@@ -50,37 +50,37 @@ def is_three(hand):
     # if count==3:
     #     return True
     # return False
-    hand_values = [f for f,s in hand]
-    x = set(hand_values)
-    if len(x) <= 2:
+    hand_values = [f for f, s in hand]
+    set_val = set(hand_values)
+    if len(set_val) <= 2:
         return False
-    for f in x:
-        if hand_values.count(f) == 3:
+    for f in set_val:
+        if hand_values.count(set_val) == 3:
             return True
     return False 
 
 def is_onepair(hand):
-    hand_values = [f for f,s in hand]
-    x = set(hand_values)
-    twopairs = [f for f in x if hand_values.count(f) == 2]
+    hand_values = [f for f, s in hand]
+    set_val = set(hand_values)
+    twopairs = [f for f in set_val if hand_values.count(f) == 2]
     if len(twopairs) != 1:
         return False
     return True
 
 def is_full(hand):
-    hand_values = [f for f,s in hand]
-    x = set(hand_values)
-    if len(x) != 2:
+    hand_values = [f for f, s in hand]
+    set_val = set(hand_values)
+    if len(set_val) != 2:
         return False
-    for f in x:
-        if hand_values.count(f) == 3:
+    for f in set_val:
+        if hand_values.count(set_val) == 3:
             return True
     return False 
 
 def is_twopair(hand):
-    hand_values = [f for f,s in hand]
-    x = set(hand_values)
-    twopairs = [f for f in x if hand_values.count(f) == 2]
+    hand_values = [f for f, s in hand]
+    set_val = set(hand_values)
+    twopairs = [f for f in set_val if hand_values.count(f) == 2]
     if len(twopairs) != 2:
         return False
     return True
