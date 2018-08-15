@@ -113,23 +113,25 @@ def hand_rank(hand):
     '''
     Function for hand rank
     '''
+    rank = 0
     if is_straight(hand) and is_flush(hand):
-        return 8
-    if is_flush(hand):
-        return 7
-    if is_straight(hand):
-        return 6
-    if is_four(hand):
-        return 5
-    if is_three(hand):
-        return 4
-    if is_onepair(hand):
-        return 3
-    if is_full(hand):
-        return 2
-    if is_twopair(hand):
-        return 1
-    return 0
+        rank =8
+    elif is_flush(hand):
+        rank = 7
+    elif is_straight(hand):
+        rank = 6
+    elif is_four(hand):
+        rank = 5
+    elif is_three(hand):
+        rank = 4
+    elif is_onepair(hand):
+        rank = 3
+    elif is_full(hand):
+        rank = 2
+    elif is_twopair(hand):
+        rank = 1
+    else:
+        rank = 0
 
 def poker(hands):
     '''Poker function
