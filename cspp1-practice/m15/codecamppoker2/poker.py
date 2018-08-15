@@ -69,19 +69,19 @@ def is_onepair(hand):
 def hand_rank(hand):
     if is_straight(hand) and is_flush(hand):
         #print("called 3")
-        return 3
+        return 6
     if is_flush(hand):
         #print("called 2")
-        return 2
+        return 5
     if is_straight(hand):
         #print("called")
-        return 1
-    if is_four(hand):
         return 4
+    if is_four(hand):
+        return 3
     if is_three(hand):
-        return 5
+        return 2
     if is_onepair(hand):
-        return 6
+        return 1
     return 0
 
 def poker(hands):
