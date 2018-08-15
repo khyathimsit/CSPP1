@@ -115,7 +115,7 @@ def hand_rank(hand):
     '''
     rank = 0
     if is_straight(hand) and is_flush(hand):
-        rank =8
+        rank = 8
     elif is_flush(hand):
         rank = 7
     elif is_straight(hand):
@@ -132,6 +132,7 @@ def hand_rank(hand):
         rank = 1
     else:
         rank = 0
+    return rank
 
 def poker(hands):
     '''Poker function
