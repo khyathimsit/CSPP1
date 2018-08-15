@@ -55,7 +55,7 @@ def is_three(hand):
     if len(set_val) <= 2:
         return False
     for f in set_val:
-        if hand_values.count(set_val) == 3:
+        if hand_values.count(f) == 3:
             return True
     return False 
 
