@@ -28,11 +28,11 @@ def is_four(hand):
     # if count==4:
     #     return True
     # return False
-    hand_values = [f for f,s in hand]
-    x = set(hand_values)
-    if len(x) != 2:
+    hand_values = [f for f, s in hand]
+    set_val = set(hand_values)
+    if len(set_val) != 2:
         return False
-    for f in x:
+    for f in set_val:
         if hand_values.count(f) == 4:
             return True
     return False 
