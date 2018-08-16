@@ -52,7 +52,7 @@ def is_four(hand):
 def is_three(hand):
     '''
     Function for 3 of a kind
-    '''0
+    '''
     # count = 1
     # stng_values = "--23456789TJQKA"
     # hand_values = []
