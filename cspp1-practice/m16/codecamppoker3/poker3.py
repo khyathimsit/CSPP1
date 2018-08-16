@@ -12,7 +12,8 @@ def is_straight(ranks):
     '''
      straight function
     '''
-    return ((max(ranks) - min(ranks) == 4 and len(set(ranks)) == 5) or (ranks[1:5] == [5, 4, 3, 2] and ranks[0] == 14))
+    return ((max(ranks) - min(ranks) == 4 and len(set(ranks)) == 5) or
+           (ranks[1:5] == [5, 4, 3, 2] and ranks[0] == 14))
 
 def kind(ranks, num_n):
     '''which kind'''
@@ -49,7 +50,7 @@ def hand_rank(hand):
         return 6, kind(rank, 3), kind(rank, 2), rank
     if is_flush(hand):
         return 5, rank
-    if is_straight(hand):
+    if is_straight(rank):
         return 4, rank
     if kind(rank, 3):
         return 3, kind(rank, 3), rank
