@@ -80,10 +80,10 @@ def is_onepair(hand):
     '''
     hand_values = [f_1 for f_1, s in hand]
     set_val = set(hand_values)
-    twopairs = [f_1 for f_1 in set_val if hand_values.count(f_1) == 2]
-    if len(twopairs) != 1:
-        return False
-    return True
+    onepair = [f_1 for f_1 in set_val if hand_values.count(f_1) == 2]
+    if len(onepair) == 1:
+        return True
+    return False
 
 def is_full(hand):
     '''
@@ -115,21 +115,21 @@ def hand_rank(hand):
     '''
     rank = 0
     if is_straight(hand) and is_flush(hand):
-        rank = 8
-    elif is_flush(hand):
-        rank = 7
-    elif is_straight(hand):
-        rank = 6
+        rank = 1
     elif is_four(hand):
+        rank = 2
+    elif is_full(hand):
+        rank = 3
+    elif is_flush(hand):
+        rank = 4
+    elif is_straight(hand):
         rank = 5
     elif is_three(hand):
-        rank = 4
-    elif is_onepair(hand):
-        rank = 3
-    elif is_full(hand):
-        rank = 2
+        rank = 6
     elif is_twopair(hand):
-        rank = 1
+        rank = 7
+    elif is_onepair(hand):
+        rank = 8
     else:
         rank = 0
     return rank
