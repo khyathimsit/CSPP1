@@ -5,9 +5,9 @@ import re
 import math
 import copy
 def word_list(input1, input2):
-	'''
-	Function to convert letters into smaller case and remove special letters 
-	'''
+    '''
+    Function to convert letters into smaller case and remove special letters 
+    '''
     f_1 = ""
     f_2 = ""
     
@@ -31,20 +31,20 @@ def word_list(input1, input2):
     word_list_1 = list_1[:]
 
     for i in word_list_1:
-    	if i in key_list:
-    		list_1.remove(i)
+        if i in key_list:
+            list_1.remove(i)
 
     word_list_1 = list_2[:]
 
     for i in word_list_1:
-    	if i in key_list:
-    		list_2.remove(i)
+        if i in key_list:
+            list_2.remove(i)
     return freq_count(list_1, list_2)
 
 def freq_count(list_1, list_2):
-	'''
-	Function for frequency count
-	'''
+    '''
+    Function for frequency count
+    '''
     dict_1 = {}
     dict_2 = {}
     common_dict = {}
@@ -65,16 +65,16 @@ def freq_count(list_1, list_2):
         if i in dict_2:
             common_dict[i] = [dict_1[i], dict_2[i]]
         else:
-        	common_dict[i] = [dict_1[i], 0]
+            common_dict[i] = [dict_1[i], 0]
     for j in dict_2:
-    	if j not in common_dict:
-    		common_dict[j] = [0, dict_2[j]]
+        if j not in common_dict:
+            common_dict[j] = [0, dict_2[j]]
     d1 = copy.deepcopy(common_dict)
 
     for l in d1:
-    	len_1 = len(l)
-    	if len_1 == 0:
-    		del common_dict[l]
+        len_1 = len(l)
+        if len_1 == 0:
+            del common_dict[l]
     #print(sorted(common_dict.keys()))
     return common_dict
 
