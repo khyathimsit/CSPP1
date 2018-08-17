@@ -5,6 +5,9 @@ import re
 import math
 import copy
 def word_list(input1, input2):
+	'''
+	Function to convert letters into smaller case and remove special letters 
+	'''
     f_1 = ""
     f_2 = ""
     
@@ -36,20 +39,12 @@ def word_list(input1, input2):
     for i in word_list_1:
     	if i in key_list:
     		list_2.remove(i)
-
-    # for i in key_list:
-    #     for j in list_1:
-    #         if i == j:
-    #             list_1.remove(j)
-    
-    # for i in key_list:
-    #     for j in list_2:
-    #         if i == j:
-    #             list_2.remove(j)   
-    #print(list_1,list_2)
     return freq_count(list_1, list_2)
 
 def freq_count(list_1, list_2):
+	'''
+	Function for frequency count
+	'''
     dict_1 = {}
     dict_2 = {}
     common_dict = {}
@@ -82,10 +77,6 @@ def freq_count(list_1, list_2):
     		del common_dict[l]
     #print(sorted(common_dict.keys()))
     return common_dict
-
-    
-    
-
 
 def similarity(dict1):
     '''
