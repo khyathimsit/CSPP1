@@ -20,7 +20,7 @@ def word_list(input1, input2):
     
     list_1 = f_1.split()
     list_2 = f_2.split()
-    print(list_1)
+    #print(list_1)
    
     remove_1 = load_stopwords("stopwords.txt")
     key_list = remove_1.keys()
