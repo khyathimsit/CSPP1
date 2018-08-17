@@ -34,7 +34,7 @@ def word_list(input1, input2):
         for j in list_2:
             if i == j:
                 list_2.remove(j)   
-    print(list_1,list_2)
+    #print(list_1,list_2)
     return freq_count(list_1, list_2)
 
 def freq_count(list_1, list_2):
@@ -68,6 +68,7 @@ def freq_count(list_1, list_2):
     	len_1 = len(l)
     	if len_1 == 0:
     		del common_dict[l]
+    print(sorted(common_dict.keys()))
     return common_dict
 
     
