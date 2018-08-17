@@ -80,7 +80,7 @@ def freq_count(list_1, list_2):
     	len_1 = len(l)
     	if len_1 == 0:
     		del common_dict[l]
-    print(sorted(common_dict.keys()))
+    #print(sorted(common_dict.keys()))
     return common_dict
 
     
@@ -99,7 +99,7 @@ def similarity(dict1):
         num_val += dict1[i][0] * dict1[i][1]
         a_1 += dict1[i][0] ** 2
         b_1 += dict1[i][1] ** 2
-    print(num_val,a_1,b_1)
+    #print(num_val,a_1,b_1)
     distance = (num_val)/(math.sqrt(a_1)*math.sqrt(b_1))
     return distance
 
