@@ -8,14 +8,13 @@ def word_list(input1, input2):
     f_1 = ""
     f_2 = ""
     
-    f_1 = re.sub('[^ a-z]',' ','',input1.lower())
-    f_2 = re.sub('[^ a-z]',' ','',input2.lower())
+    f_1 = re.sub('[^ a-z]','',input1.lower())
+    f_2 = re.sub('[^ a-z]','',input2.lower())
     
-    f_1 = f_1.replace("'", "")
-    f_2 = f_2.replace("'", "")
-    print(f_1, f_2)
+    # f_1 = f_1.replace("'", "")
+    # f_2 = f_2.replace("'", "")
+    # print(f_1, f_2)
 
-    
     list_1 = []
     list_2 = []
     
@@ -58,6 +57,18 @@ def freq_count(list_1, list_2):
     for i in dict_1:
         if i in dict_2:
             common_dict[i] = [dict_1[i], dict_2[i]]
+        else:
+        	common_dict[i] = [dict_1[i], 0]
+    for j in dict_2:
+    	if j not in common_dict:
+    		common_dict[j] = [0, dict_2[j]]
+    d1 = copy.deepcopy(common_dict)
+
+    for l in d1:
+    	len_1 = len(l)
+    	if len_1 == 0:
+    		del common_dict[l]
+    return common_dict
 
     
     
@@ -73,8 +84,11 @@ def similarity(dict1):
     distance = 0
     for i in dict1:
         num_val += dict1[i][0] * dict1[i][1]
-        a_1 +=
+        a_1 += dict1[i][0] ** 2
+        b_1 += dict1[i][1] ** 2
 
+    distance = (num_val)/(math.sqrt(a_1)*math.sqrt(b_1))
+    return distance
 
 def load_stopwords(filename):
     '''
@@ -92,7 +106,7 @@ def main():
     '''
     input1 = input()
     input2 = input()
-    #print(similarity(input1, input2))
+    common_dict_1 = word_list(input1, input2)
     print(word_list(input1, input2))
 
 if __name__ == '__main__':
