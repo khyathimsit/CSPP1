@@ -33,7 +33,7 @@ def word_list(input1, input2):
 
     word_list_1 = list_2[:]
 
-    for i in word_list_2:
+    for i in word_list_1:
     	if i in key_list:
     		list_2.remove(i)
 
