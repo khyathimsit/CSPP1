@@ -23,17 +23,29 @@ def word_list(input1, input2):
     #print(list_1)
    
     remove_1 = load_stopwords("stopwords.txt")
-    key_list = remove_1.keys()
+    key_list = list(remove_1.keys())
 
-    for i in key_list:
-        for j in list_1:
-            if i == j:
-                list_1.remove(j)
+    word_list_1 = list_1[:]
+
+    for i in list_1:
+    	if i in key_list:
+    		list_1.remove(i)
+
+    word_list_1 = list_2[:]
+
+    for i in list_2:
+    	if i in key_list:
+    		list_2.remove(i)
+
+    # for i in key_list:
+    #     for j in list_1:
+    #         if i == j:
+    #             list_1.remove(j)
     
-    for i in key_list:
-        for j in list_2:
-            if i == j:
-                list_2.remove(j)   
+    # for i in key_list:
+    #     for j in list_2:
+    #         if i == j:
+    #             list_2.remove(j)   
     #print(list_1,list_2)
     return freq_count(list_1, list_2)
 
