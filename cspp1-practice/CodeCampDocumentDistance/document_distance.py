@@ -34,7 +34,7 @@ def word_list(input1, input2):
         for j in list_2:
             if i == j:
                 list_2.remove(j)   
-    print(list_1, list_2)
+    #print(list_1, list_2)
     return freq_count(list_1, list_2)
 
 def freq_count(list_1, list_2):
@@ -86,7 +86,7 @@ def similarity(dict1):
         num_val += dict1[i][0] * dict1[i][1]
         a_1 += dict1[i][0] ** 2
         b_1 += dict1[i][1] ** 2
-
+    print(num_val,a_1,b_1)
     distance = (num_val)/(math.sqrt(a_1)*math.sqrt(b_1))
     return distance
 
