@@ -11,8 +11,8 @@ def word_list(input1, input2):
     f_1 = ""
     f_2 = ""
     
-    f_1 = re.sub('[^ a-z]','',input1.lower())
-    f_2 = re.sub('[^ a-z]','',input2.lower())
+    f_1 = re.sub('[^ a-z]', '', input1.lower())
+    f_2 = re.sub('[^ a-z]', '', input2.lower())
     # f_1 = f_1.replace("'", "")
     # f_2 = f_2.replace("'", "")
     # print(f_1, f_2)
