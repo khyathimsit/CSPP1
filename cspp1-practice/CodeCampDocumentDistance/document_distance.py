@@ -6,11 +6,11 @@ import math
 import copy
 def word_list(input1, input2):
     '''
-    Function to convert letters into smaller case and remove special letters 
+    Function to convert letters into smaller case and remove special letters
     '''
     f_1 = ""
     f_2 = ""
-    
+
     f_1 = re.sub('[^ a-z]', '', input1.lower())
     f_2 = re.sub('[^ a-z]', '', input2.lower())
     # f_1 = f_1.replace("'", "")
@@ -67,8 +67,8 @@ def freq_count(list_1, list_2):
             common_dict[j] = [0, dict_2[j]]
     d_1 = copy.deepcopy(common_dict)
 
-    for l in d_1:
-        len_1 = len(l)
+    for k in d_1:
+        len_1 = len(k)
         if len_1 == 0:
             del common_dict[l]
     #print(sorted(common_dict.keys()))
