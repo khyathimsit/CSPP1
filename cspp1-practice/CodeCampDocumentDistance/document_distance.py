@@ -21,7 +21,7 @@ def word_list(input1, input2):
     list_1 = f_1.split()
     list_2 = f_2.split()
     #print(list_1)
-    remove_1 = load_stopwords()
+    remove_1 = load_stopwords("stopwords.txt")
     key_list = list(remove_1.keys())
 
     word_list_1 = list_1[:]
@@ -87,12 +87,11 @@ def similarity(dict1):
     distance = (num_val)/(math.sqrt(a_1)*math.sqrt(b_1))
     return distance
 
-def load_stopwords():
+def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    filename = "stopwords.txt"
     with open(filename, 'r') as filename:
         for line in filename:
             stopwords[line.strip()] = 0
