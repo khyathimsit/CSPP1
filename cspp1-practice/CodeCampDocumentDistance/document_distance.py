@@ -13,18 +13,14 @@ def word_list(input1, input2):
     
     f_1 = re.sub('[^ a-z]','',input1.lower())
     f_2 = re.sub('[^ a-z]','',input2.lower())
-    
     # f_1 = f_1.replace("'", "")
     # f_2 = f_2.replace("'", "")
     # print(f_1, f_2)
-
     list_1 = []
     list_2 = []
-    
     list_1 = f_1.split()
     list_2 = f_2.split()
     #print(list_1)
-   
     remove_1 = load_stopwords("stopwords.txt")
     key_list = list(remove_1.keys())
 
