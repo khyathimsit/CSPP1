@@ -87,7 +87,7 @@ def similarity(dict1):
     distance = (num_val)/(math.sqrt(a_1)*math.sqrt(b_1))
     return distance
 
-def load_stopwords(filename):
+def load_stopwords():
     '''
         loads stop words from a file and returns a dictionary
     '''
