@@ -76,7 +76,6 @@ def build_search_index(docs):
 
     # return search index
     dict_1 = {}
-    list_2 = []
     # for k,v in enumerate(docs):
     #     dict_1[k] = v
     # print (dict_1)
@@ -87,13 +86,11 @@ def build_search_index(docs):
             dict_1[k] += 1
     #print(dict_1)
 
-    for k in docs:
-        #if k in docs:
-        x = (docs.index(k), 1)
-        #list_2 = list_2.(docs.index(k), 1)
-    list_2 = list(x)
-    #print(list_2)
-    return print_search_index(list_2)
+    # for k in dict_1:
+    #     if k not in dict_2:
+    #         x = (docs.index(k), 1)
+    # return print_search_index(list_2)
+    return print_search_index(dict_1)
 
 # helper function to print the search index
 # use this to verify how the search index looks
