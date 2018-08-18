@@ -92,8 +92,8 @@ def build_search_index(docs):
         x = (docs.index(k), 1)
         #list_2 = list_2.(docs.index(k), 1)
     list_2 = list(x)
-    print(list_2)
-    return list_2
+    #print(list_2)
+    return print_search_index(list_2)
 
 # helper function to print the search index
 # use this to verify how the search index looks
