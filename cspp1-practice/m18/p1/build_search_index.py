@@ -91,7 +91,7 @@ def build_search_index(docs):
         #if k in docs:
         x = (docs.index(k), 1)
         #list_2 = list_2.(docs.index(k), 1)
-        list_2 = list(x)
+    list_2 = list(x)
     print(list_2)
     return list_2
 
