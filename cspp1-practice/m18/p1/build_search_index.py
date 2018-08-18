@@ -22,7 +22,7 @@
 '''
 import re
 # helper function to load the stop words from a file
-def load_stopwords(filename):
+def load_stopwords():
     '''
         loads stop words from a file and returns a dictionary
     '''
@@ -42,49 +42,68 @@ def word_list(text):
     '''
     file_1 = ""
     file_1 = re.sub('[^ a-z]', '', text.lower())
-    print(file_1)
+    
     list_1 = []
     list_1 = file_1.split()
+    #print(list_1)
     
     remove_1 = load_stopwords()
     key_list = list(remove_1.keys())
-    print(key_list)
+    #print(key_list)
 
-    # word_list_1 = list_1[:]
+    word_list_1 = list_1[:]
 
-    # for i in word_list_1:
-    #     if i in key_list:
-    #         list_1.remove(i)
+    for i in word_list_1:
+        if i in key_list:
+            list_1.remove(i)
+    #print(list_1)
+    return build_search_index(list_1)
 
-# def build_search_index(docs):
-#     '''
-#         Process the docs step by step as given below
-#     '''
+def build_search_index(docs):
+    '''
+        Process the docs step by step as given below
+    '''
 
-#     # initialize a search index (an empty dictionary)
+    # initialize a search index (an empty dictionary)
 
-#     # iterate through all the docs
-#     # keep track of doc_id which is the list index corresponding the document
-#     # hint: use enumerate to obtain the list index in the for loop
+    # iterate through all the docs
+    # keep track of doc_id which is the list index corresponding the document
+    # hint: use enumerate to obtain the list index in the for loop
 
-#         # clean up doc and tokenize to words list
+        # clean up doc and tokenize to words list
 
-#         # add or update the words of the doc to the search index
+        # add or update the words of the doc to the search index
 
-#     # return search index
-#     pass
+    # return search index
+    dict_1 = {}
+    list_2 = []
+    # for k,v in enumerate(docs):
+    #     dict_1[k] = v
+    # print (dict_1)
+    for k in docs:
+        if k not in dict_1:
+            dict_1[k] = 1
+        else:
+            dict_1[k] += 1
+    #print(dict_1)
 
-# # helper function to print the search index
-# # use this to verify how the search index looks
-# def print_search_index(index):
-#     '''
-#         print the search index
-#     '''
-#     keys = sorted(index.keys())
-#     for key in keys:
-#         print(key, " - ", index[key])
+    for k in dict_1:
+        if k in docs:
+            list_2 = list_2.append(index(k),1)
+    print(list_2)
+    return list_2
 
-# # main function that loads the docs from files
+# helper function to print the search index
+# use this to verify how the search index looks
+def print_search_index(index):
+    '''
+        print the search index
+    '''
+    keys = sorted(index.keys())
+    for key in keys:
+        print(key, " - ", index[key])
+
+# main function that loads the docs from files
 def main():
     '''
         main function
@@ -97,7 +116,10 @@ def main():
     for i in range(lines):
         documents.append(input())
         i += 1
-    print(word_list(documents))
+    #print(documents)
+    docs = ' '.join(documents)
+    #print(docs)
+    print(word_list(docs))
 
     # call print to display the search index
     #print_search_index(build_search_index(documents))
