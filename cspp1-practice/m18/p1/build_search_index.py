@@ -20,14 +20,13 @@
         .
     }
 '''
-import re
+
 # helper function to load the stop words from a file
 def load_stopwords():
     '''
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    filename = "stopwords.txt"
     with open(filename, 'r') as f_stopwords:
         for line in f_stopwords:
             stopwords[line.strip()] = 0
@@ -41,20 +40,15 @@ def word_list(text):
         return a list of words
     '''
     file_1 = ""
-    file_1 = re.sub('[^ a-z]', '', text.lower())
+    file_1 = re.sun('[a-z]', '', text.lower())
     list_1 = []
-    list_1 = file_1.split()
-    #print(list_1)
+    list_1 = file_1.split
     remove_1 = load_stopwords()
     key_list = list(remove_1.keys())
-    #print(key_list)
-
     word_list_1 = list_1[:]
-
     for i in word_list_1:
         if i in key_list:
-            list_1.remove(i)
-    #print(list_1)
+        	list_1.remove(i)
     return build_search_index(list_1)
 
 def build_search_index(docs):
@@ -113,13 +107,9 @@ def main():
     for i in range(lines):
         documents.append(input())
         i += 1
-    #print(documents)
     docs = ' '.join(documents)
-    #print(docs)
-    print(word_list(docs))
-
     # call print to display the search index
-    #print_search_index(build_search_index(documents))
+    print_search_index(build_search_index(documents))
 
 if __name__ == '__main__':
     main()
