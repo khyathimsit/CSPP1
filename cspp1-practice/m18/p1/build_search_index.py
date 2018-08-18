@@ -87,9 +87,9 @@ def build_search_index(docs):
             dict_1[k] += 1
     #print(dict_1)
 
-    for k in dict_1:
-        if k in docs:
-            list_2 = list_2.append(index(k),1)
+    for k in docs:
+        #if k in docs:
+        list_2 = list_2.append(index(k), 1)
     print(list_2)
     return list_2
 
