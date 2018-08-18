@@ -42,7 +42,7 @@ def word_list(text):
     '''
     file_1 = ""
     file_1 = re.sub('[^ a-z]', '', text.lower())
-    
+    print(file_1)
     list_1 = []
     list_1 = file_1.split()
     
@@ -56,39 +56,35 @@ def word_list(text):
     #     if i in key_list:
     #         list_1.remove(i)
 
-    
-    
-    
+# def build_search_index(docs):
+#     '''
+#         Process the docs step by step as given below
+#     '''
 
-def build_search_index(docs):
-    '''
-        Process the docs step by step as given below
-    '''
+#     # initialize a search index (an empty dictionary)
 
-    # initialize a search index (an empty dictionary)
+#     # iterate through all the docs
+#     # keep track of doc_id which is the list index corresponding the document
+#     # hint: use enumerate to obtain the list index in the for loop
 
-    # iterate through all the docs
-    # keep track of doc_id which is the list index corresponding the document
-    # hint: use enumerate to obtain the list index in the for loop
+#         # clean up doc and tokenize to words list
 
-        # clean up doc and tokenize to words list
+#         # add or update the words of the doc to the search index
 
-        # add or update the words of the doc to the search index
+#     # return search index
+#     pass
 
-    # return search index
-    pass
+# # helper function to print the search index
+# # use this to verify how the search index looks
+# def print_search_index(index):
+#     '''
+#         print the search index
+#     '''
+#     keys = sorted(index.keys())
+#     for key in keys:
+#         print(key, " - ", index[key])
 
-# helper function to print the search index
-# use this to verify how the search index looks
-def print_search_index(index):
-    '''
-        print the search index
-    '''
-    keys = sorted(index.keys())
-    for key in keys:
-        print(key, " - ", index[key])
-
-# main function that loads the docs from files
+# # main function that loads the docs from files
 def main():
     '''
         main function
@@ -101,9 +97,10 @@ def main():
     for i in range(lines):
         documents.append(input())
         i += 1
+    print(word_list(documents))
 
     # call print to display the search index
-    print_search_index(build_search_index(documents))
+    #print_search_index(build_search_index(documents))
 
 if __name__ == '__main__':
     main()
