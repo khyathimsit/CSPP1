@@ -42,11 +42,9 @@ def word_list(text):
     '''
     file_1 = ""
     file_1 = re.sub('[^ a-z]', '', text.lower())
-    
     list_1 = []
     list_1 = file_1.split()
     #print(list_1)
-    
     remove_1 = load_stopwords()
     key_list = list(remove_1.keys())
     #print(key_list)
