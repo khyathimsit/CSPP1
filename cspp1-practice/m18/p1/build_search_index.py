@@ -41,7 +41,7 @@ def word_list(text):
         return a list of words
     '''
     file_1 = ""
-    file_1 = re.sun('[a-z]', '', text.lower())
+    file_1 = re.sub('[a-z]', '', text.lower())
     list_1 = []
     list_1 = file_1.split
     remove_1 = load_stopwords()
