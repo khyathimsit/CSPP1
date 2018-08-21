@@ -7,7 +7,7 @@ class Cipher:
         lower_case = ""
         upper_case = ""
         lower_case = "-" + string.ascii_lowercase() + string.ascii_lowercase()
-        upper_case = "-" + string_ascii_uppercase() + string_ascii_uppercase()
+        upper_case = "-" + string.ascii_uppercase() + string.ascii_uppercase()
         result_string = ""
         for i in range(0, len(self.text)):
             if self.text[i] in lower_case:
