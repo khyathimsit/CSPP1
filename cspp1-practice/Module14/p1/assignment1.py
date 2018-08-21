@@ -6,8 +6,8 @@ class Cipher:
     def shift(self, number):
         lower_case = ""
         upper_case = ""
-        lower_case = "-" + string.ascii_lowercase() + string.ascii_lowercase()
-        upper_case = "-" + string.ascii_uppercase() + string.ascii_uppercase()
+        lower_case = "-" + string.ascii_lowercase + string.ascii_lowercase
+        upper_case = "-" + string.ascii_uppercase + string.ascii_uppercase
         result_string = ""
         for i in range(0, len(self.text)):
             if self.text[i] in lower_case:
