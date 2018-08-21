@@ -1,9 +1,17 @@
 import string
 class Cipher:
+    '''
+    Ceaser cipher code
+    '''
     def __init__(self, text):
+        '''
+        init method
+        '''
         self.text = text
-   
     def shift(self, number):
+        '''
+        Shift method to move to the next required letter
+        '''
         lower_case = ""
         upper_case = ""
         lower_case = "-" + string.ascii_lowercase + string.ascii_lowercase
