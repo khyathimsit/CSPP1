@@ -11,6 +11,11 @@ class Cipher:
         init method
         '''
         self.text = text
+    def __len__(self):
+        count = 0
+        for _ in self.text:
+            count += 1
+        return count
     def shift(self, number):
         '''
         Shift method to move to the next required letter
