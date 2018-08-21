@@ -1,4 +1,7 @@
 import string
+'''
+Class intro
+'''
 class Cipher:
     '''
     Ceaser cipher code
