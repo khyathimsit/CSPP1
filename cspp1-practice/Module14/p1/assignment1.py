@@ -1,7 +1,7 @@
-import string
 '''
 Class intro
 '''
+import string
 class Cipher:
     '''
     Ceaser cipher code
