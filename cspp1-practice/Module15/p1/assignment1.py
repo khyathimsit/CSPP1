@@ -43,7 +43,7 @@ def is_word(word_list, word):
     False
     '''
     word = word.lower()
-    word = word.strip(" !@#$%^&*()-_+={}[]|\:;'<>?,./\"")
+    word = word.strip(" !@#$%^&*()-_+={}[]|:;'<>?,./\"")
     return word in word_list
 
 ### DO NOT MODIFY THIS FUNCTION ###
@@ -58,7 +58,7 @@ def get_story_string():
 
 WORDLIST_FILENAME = 'words.txt'
 
-class Message(object):
+class Message():
     ''' Message object '''
     ### DO NOT MODIFY THIS METHOD ###
     def __init__(self, text):
@@ -73,6 +73,7 @@ class Message(object):
         '''
         self.message_text = text
         self.valid_words = load_words("words.txt")
+        self.shift_dict = {}
 
     ### DO NOT MODIFY THIS METHOD ###
     def get_message_text(self):
@@ -163,6 +164,7 @@ class PlaintextMessage(Message):
         Hint: consider using the parent class constructor so less
         code is repeated
         '''
+        super(PlaintextMessage, self).__init__(text)
         self.text = text
         self.shift = shift
         self.valid_words = load_words("words.txt")
@@ -214,8 +216,6 @@ class PlaintextMessage(Message):
         self.encrypting_dict = message.build_shift_dict(shift)
         self.message_text_encrypted = message.apply_shift(shift)
 
-# Helper code ends
-
 class CiphertextMessage(Message):
     ''' CiphertextMessage class '''
     def __init__(self, text):
@@ -262,13 +262,11 @@ class CiphertextMessage(Message):
                 self.decrypted_message = (26-shift, decrypted)
         return self.decrypted_message
 
-
-### DO NOT MODIFY THIS METHOD ###
+# Helper code ends
 def main():
     ''' This method is provided to handle testcases'''
-    ciphertext = CiphertextMessage(input())
-    print(ciphertext.decrypt_message())
+    Ciphertext = CiphertextMessage(input())
+    print(Ciphertext.decrypt_message())
 
 if __name__ == '__main__':
     main()
-
