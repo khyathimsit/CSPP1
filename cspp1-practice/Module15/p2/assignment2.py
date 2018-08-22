@@ -267,8 +267,6 @@ def decrypt_story():
     decrypt_code = CiphertextMessage(get_story_string())
     return decrypt_code.decrypt_message()
 
-    
-
 ### DO NOT MODIFY THIS METHOD ###
 def main():
     ''' This method is provided to handle testcases'''
