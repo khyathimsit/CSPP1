@@ -265,8 +265,8 @@ class CiphertextMessage(Message):
 # Helper code ends
 def main():
     ''' This method is provided to handle testcases'''
-    Ciphertext = CiphertextMessage(input())
-    print(Ciphertext.decrypt_message())
+    ciphertext = CiphertextMessage(input())
+    print(ciphertext.decrypt_message())
 
 if __name__ == '__main__':
     main()
