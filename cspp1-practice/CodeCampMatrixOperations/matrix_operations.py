@@ -71,10 +71,10 @@ def read_matrix():
         if count != col_1:
             flag = False
     #print(flag)
-    
+
     if flag is False:
         print("Error: Invalid input for the matrix")
-      
+ 
     flag = True
     for i in matrix_2:
         count = 0
