@@ -106,4 +106,7 @@ def main():
     read_matrix()
     
 if __name__ == '__main__':
+    '''
+    execution starts here
+    '''
     main()
