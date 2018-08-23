@@ -29,7 +29,7 @@ def add_matrix(m1, m2, row_1, col_1, row_2, col_2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    if row_1==col_1 and row_2==col_1:
+    if row_1==row_2 and col_1==col_2:
         add = []
         for i in range(0, row_1):
             a = []
