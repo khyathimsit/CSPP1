@@ -87,7 +87,7 @@ def main():
         print ("Error: Invalid input for the matrix")
       
     flag =True
-    for i in matrix_1:
+    for i in matrix_2:
         count = 0
         for j in i:
             count += 1
@@ -99,7 +99,7 @@ def main():
     if flag == False:
         print ("Error: Invalid input for the matrix")
 
-    print(flag)
+    #print(flag)
 
     if flag == True:
         print(add_matrix(matrix_1, matrix_2, n, m, k, l))
