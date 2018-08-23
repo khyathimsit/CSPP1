@@ -1,4 +1,4 @@
-def mult_matrix(m1, m2, row_1, col_1, row_2, col_2):
+def mult_matrix(m_1, m_2, row_1, col_1, row_2, col_2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -7,20 +7,20 @@ def mult_matrix(m1, m2, row_1, col_1, row_2, col_2):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
     if col_1 == row_2:
-        mul = []
-        for i in range(0, row_1):
-            a = []
-            for j in range(0, row_1):
+        mul_res = []
+        for i_val in range(0, row_1):
+            a_temp = []
+            for j_val in range(0, row_1):
                 sum_val = 0
-                for k in range(0, col_1):
-                    sum_val = sum_val + (m1[i][k]*m2[k][j])
-                a.append(sum_val)
-            mul.append(a)
-        return mul
+                for k_val in range(0, col_1):
+                    sum_val = sum_val + (m_1[i_val][k_val]*m_2[k_val][j_val])
+                a_temp.append(sum_val)
+            mul_res.append(a_temp)
+        return mul_res
     print("Error: Matrix shapes invalid for mult")
 
 
-def add_matrix(m1, m2, row_1, col_1, row_2, col_2):
+def add_matrix(m_1, m_2, row_1, col_1, row_2, col_2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -29,13 +29,13 @@ def add_matrix(m1, m2, row_1, col_1, row_2, col_2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     if row_1 == row_2 and col_1 == col_2:
-        add = []
-        for i in range(0, row_1):
-            a = []
-            for j in range(0, col_1):
-                a.append(m1[i][j] + m2[i][j])
-            add.append(a)
-        return add
+        add_res = []
+        for i_val in range(0, row_1):
+            a_temp = []
+            for j_val in range(0, col_1):
+                a_temp.append(m_1[i_val][j_val] + m_2[i_val][j_val])
+            add.append(a_temp)
+        return add_res
     print("Error: Matrix shapes invalid for addition")
 
 def read_matrix():
