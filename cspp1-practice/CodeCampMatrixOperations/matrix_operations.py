@@ -34,7 +34,7 @@ def add_matrix(m_1, m_2, row_1, col_1, row_2, col_2):
             a_temp = []
             for j_val in range(0, col_1):
                 a_temp.append(m_1[i_val][j_val] + m_2[i_val][j_val])
-            add.append(a_temp)
+            add_res.append(a_temp)
         return add_res
     print("Error: Matrix shapes invalid for addition")
 
