@@ -46,7 +46,7 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    row_1,col_1 = input().split(',')
+    row_1, col_1 = input().split(',')
     row_1 = int(row_1)
     col_1 = int(col_1)
 
@@ -55,15 +55,15 @@ def read_matrix():
     for i in range(0, row_1):
         matrix_1.append(list(map(int, input().split())))
     #print(matrix_1)
-    
-    row_2,col_2 = input().split(',')
+
+    row_2, col_2 = input().split(',')
     row_2 = int(row_2)
     col_2 = int(col_2)
     for i in range(0, row_2):
         matrix_2.append(list(map(int, input().split())))
     #print(matrix_2)
 
-    flag =True
+    flag = True
     for i in matrix_1:
         count = 0
         for _ in i:
