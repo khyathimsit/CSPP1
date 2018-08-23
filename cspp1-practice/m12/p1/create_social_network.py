@@ -34,19 +34,24 @@ def create_social_network(data):
 
     # remove the pass below and start writing your code
     adict = {}
-    str_1 = data
-    str_2 = str_1.split()
-    for i in str_2:
-        list_1 = i.split("follows")
-        if list_1[0] in adict:
+    list_1 = []
+    for i in data:
+        if "follows" in i:
+            list_1 = i.split("follows")
+            if list_1[0] in adict:
             list_1[1] = list_1[1].split(',')
+            adict[list_1[0]] = list_1[1]
             # for j in list_1[1]:
             #     adict[list_1[0]].append(int(j))
-        else:
+            else:
             list_1[1] = list_1[1].split(',')
             adict[list_1[0]] = list_1[1]
         # for k in range(len(list_1[1])):
         #     adict[list_1[0]][k] = int(adict[list_1[0]][k])
+        else:
+            return adict
+    return adict
+
 
 def main():
     '''
@@ -55,10 +60,11 @@ def main():
     string = ''
     lines = int(input())
     for i in range(lines):
-        i += 1
         string += input()
-        string += '\n'
-    # str_1 = string.split('\n')
+        if i != (lines - 1):
+            string += '\n'
+        i += 1
+    string = string.split('\n')
     # print(str_1)
     print(create_social_network(string))
 if __name__ == "__main__":

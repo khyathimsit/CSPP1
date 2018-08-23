@@ -1,4 +1,4 @@
-def mult_matrix(m1, m2, n):
+def mult_matrix(m1, m2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -6,16 +6,19 @@ def mult_matrix(m1, m2, n):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    mul = []
-    for i in range(0, n):
-        a = []
-        for j in range(0, n):
-            sum_val = 0
-            for k in range(0, n):
-                sum_val = sum_val+(m1[i][k]*m2[k][j])
-            a.append(sum_val)
-        mul.append(a)
-    return mul
+    # mul = []
+    # for i in range(0, n):
+    #     a = []
+    #     for j in range(0, n):
+    #         sum_val = 0
+    #         for k in range(0, n):
+    #             sum_val = sum_val+(m1[i][k]*m2[k][j])
+    #         a.append(sum_val)
+    #     mul.append(a)
+    # return mul
+
+    
+
 
 
 def add_matrix(m1, m2, n):
