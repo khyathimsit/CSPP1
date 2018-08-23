@@ -18,7 +18,7 @@ def mult_matrix(m1, m2, n, m, k, l):
             mul.append(a)
         return mul
     else:
-    	return "Error: Matrix shapes invalid for mult"
+        return "Error: Matrix shapes invalid for mult"
 
 
 def add_matrix(m1, m2, n, m, k, l):
@@ -38,7 +38,7 @@ def add_matrix(m1, m2, n, m, k, l):
             add.append(a)
         return add
     else:
-    	return "Error: Matrix shapes invalid for addition"
+        return "Error: Matrix shapes invalid for addition"
 
 # def read_matrix():
 #     '''
@@ -74,28 +74,28 @@ def main():
     #print(matrix_2)
     flag =True
     for i in matrix_1:
-    	count = 0
-    	for j in i:
-    		count += 1
-    	if count != m:
-    		flag = False
+        count = 0
+        for j in i:
+            count += 1
+        if count != m:
+            flag = False
     
     if flag == False:
-    	print ("Error: Invalid input for the matrix")
+        print ("Error: Invalid input for the matrix")
       
     flag =True
     for i in matrix_1:
-    	count = 0
-    	for j in i:
-    		count += 1
-    	if count != l:
-    		flag = False
+        count = 0
+        for j in i:
+            count += 1
+        if count != l:
+            flag = False
 
     if flag == False:
-    	print ("Error: Invalid input for the matrix")
+        print ("Error: Invalid input for the matrix")
 
     if flag == True:
-    	print(add_matrix(matrix_1, matrix_2, n, m, k, l))
+        print(add_matrix(matrix_1, matrix_2, n, m, k, l))
         print(mult_matrix(matrix_1, matrix_2, n, m, k, l))
 
 
