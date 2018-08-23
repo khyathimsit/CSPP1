@@ -44,8 +44,8 @@ def add_matrix(m_1, m_2):
     l_2 = len(m_1[0])
     if(l_1 == len(m_2) and l_2 == len(m_2[0])):
         for i in range(l_1):
-            for j in range(len(l_2)):
-                m1[i][j] = int(m_1[i][j]) + int(m_2[i][j])
+            for j in range(l_2):
+                m_1[i][j] = int(m_1[i][j]) + int(m_2[i][j])
         
         return m_1
     else:
