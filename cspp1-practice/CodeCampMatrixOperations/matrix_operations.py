@@ -55,14 +55,14 @@ def read_matrix():
     matrix_1 = []
     matrix_2 = []
     for i in range(0, row_1):
-        matrix_1.append(list(map(int,input().split())))
+        matrix_1.append(list(map(int, input().split())))
     #print(matrix_1)
     
     row_2,col_2 = input().split(',')
     row_2 = int(row_2)
     col_2 = int(col_2)
     for i in range(0, row_2):
-        matrix_2.append(list(map(int,input().split())))
+        matrix_2.append(list(map(int, input().split())))
     #print(matrix_2)
 
     flag =True
