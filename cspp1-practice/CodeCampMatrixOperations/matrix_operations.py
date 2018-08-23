@@ -65,13 +65,13 @@ def main():
     matrix_2 = []
     for i in range(0, n):
         matrix_1.append(list(map(int,input().split())))
-    print(matrix_1)
+    #6print(matrix_1)
     
     k,l = input().split(',')
     k = int(k)
     for i in range(0, k):
         matrix_2.append(list(map(int,input().split())))
-    print(matrix_2)
+    #print(matrix_2)
     flag =True
     for i in matrix_1:
         count = 0
@@ -79,6 +79,7 @@ def main():
             count += 1
         if count != m:
             flag = False
+    print(flag)
     
     if flag == False:
         print ("Error: Invalid input for the matrix")
@@ -90,6 +91,8 @@ def main():
             count += 1
         if count != l:
             flag = False
+
+    print(flag)
 
     if flag == False:
         print ("Error: Invalid input for the matrix")
