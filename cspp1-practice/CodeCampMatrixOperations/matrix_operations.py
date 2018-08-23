@@ -59,8 +59,8 @@ def read_matrix():
     #print(matrix_1)
     
     row_2,col_2 = input().split(',')
-    row_2 = int(k)
-    col_2 = int(l)
+    row_2 = int(row_2)
+    col_2 = int(col_2)
     for i in range(0, row_2):
         matrix_2.append(list(map(int,input().split())))
     #print(matrix_2)
@@ -70,7 +70,7 @@ def read_matrix():
         count = 0
         for j in i:
             count += 1
-        if count != col_1:
+        if count != col_1s:
             flag = False
     #print(flag)
     
