@@ -39,13 +39,13 @@ def create_social_network(data):
         if "follows" in i:
             list_1 = i.split("follows")
             if list_1[0] in adict:
-            list_1[1] = list_1[1].split(',')
-            adict[list_1[0]] = list_1[1]
+                list_1[1] = list_1[1].split(',')
+                adict[list_1[0]] = list_1[1]
             # for j in list_1[1]:
             #     adict[list_1[0]].append(int(j))
             else:
-            list_1[1] = list_1[1].split(',')
-            adict[list_1[0]] = list_1[1]
+                list_1[1] = list_1[1].split(',')
+                adict[list_1[0]] = list_1[1]
         # for k in range(len(list_1[1])):
         #     adict[list_1[0]][k] = int(adict[list_1[0]][k])
         else:
@@ -55,7 +55,7 @@ def create_social_network(data):
 
 def main():
     '''
-        handling testcase input and printing output
+        handlings testcase input and printing output
     '''
     string = ''
     lines = int(input())
