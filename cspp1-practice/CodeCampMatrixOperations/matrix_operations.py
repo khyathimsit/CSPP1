@@ -59,13 +59,13 @@ def main():
     matrix_2 = []
     for i in range(0, n):
         matrix_1.append(list(map(int,input().split())))
-    #print(matrix_1)
+    print(matrix_1)
     
     n,m = input().split(',')
     n = int(n)
     for i in range(0, n):
         matrix_2.append(list(map(int,input().split())))
-    #print(matrix_2)
+    print(matrix_2)
     print(add_matrix(matrix_1, matrix_2, n))
     print(mult_matrix(matrix_1, matrix_2, n))
 
