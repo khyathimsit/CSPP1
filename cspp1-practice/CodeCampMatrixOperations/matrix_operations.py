@@ -97,6 +97,9 @@ def read_matrix():
         print(mult_matrix(matrix_1, matrix_2, row_1, col_1, row_2, col_2))
 
 def main():
+    '''
+    Main Function
+    '''
     # read matrix 1
 
     # read matrix 2
