@@ -42,12 +42,15 @@ def add_matrix(m_1, m_2):
     # return None
     l_1 = len(m_1)
     l_2 = len(m_1[0])
+    res_mat = []
     if(l_1 == len(m_2) and l_2 == len(m_2[0])):
         for i in range(l_1):
+            in_mat = []
             for j in range(l_2):
-                m_1[i][j] = int(m_1[i][j]) + int(m_2[i][j])
+                in_mat.append(m_1[i][j] + m_2[i][j])
+            res_mat.append(in_mat)
         
-        return m_1
+        return res_mat
     else:
         print("Error: Matrix shapes invalid for addition")
         return None
