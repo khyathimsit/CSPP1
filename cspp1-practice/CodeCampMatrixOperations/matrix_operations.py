@@ -49,11 +49,11 @@ def add_matrix(m_1, m_2):
             for j in range(l_2):
                 in_mat.append(m_1[i][j] + m_2[i][j])
             res_mat.append(in_mat)
-        
+
         return res_mat
-    else:
-        print("Error: Matrix shapes invalid for addition")
-        return None
+
+    print("Error: Matrix shapes invalid for addition")
+    return None
 
 def read_matrix():
     '''
