@@ -1,3 +1,5 @@
+''' Author : khyathi
+    Date: 23rd August 2018'''
 def mult_matrix(m_1, m_2, row_1, col_1, row_2):
     '''
         check if the matrix1 columns = matrix2 rows
@@ -106,6 +108,6 @@ def main():
 
     # multiply matrix 1 and matrix 2
     read_matrix()
-    
+
 if __name__ == '__main__':
     main()
