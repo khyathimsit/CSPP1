@@ -37,7 +37,7 @@ def create_social_network(data):
     list_1 = []
     for i in data:
         if "follows" in i:
-            list_1 = i.split("follows")
+            list_1 = i.split(" follows ")
             if list_1[0] in adict:
                 list_1[1] = list_1[1].split(',')
                 adict[list_1[0]] = list_1[1]
