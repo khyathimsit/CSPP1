@@ -70,7 +70,7 @@ def read_matrix():
         count = 0
         for j in i:
             count += 1
-        if count != col_1s:
+        if count != col_1:
             flag = False
     #print(flag)
     
