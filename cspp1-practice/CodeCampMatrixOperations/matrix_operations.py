@@ -13,7 +13,7 @@ def mult_matrix(m1, m2, row_1, col_1, row_2, col_2):
             for j in range(0, row_1):
                 sum_val = 0
                 for k in range(0, col_1):
-                    sum_val = sum_val+(m1[i][k]*m2[k][j])
+                    sum_val = sum_val + (m1[i][k]*m2[k][j])
                 a.append(sum_val)
             mul.append(a)
         return mul
@@ -29,7 +29,7 @@ def add_matrix(m1, m2, row_1, col_1, row_2, col_2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    if row_1==row_2 and col_1==col_2:
+    if row_1 == row_2 and col_1 == col_2:
         add = []
         for i in range(0, row_1):
             a = []
@@ -75,9 +75,9 @@ def read_matrix():
     #print(flag)
     
     if flag is False:
-        print ("Error: Invalid input for the matrix")
+        print("Error: Invalid input for the matrix")
       
-    flag =True
+    flag = True
     for i in matrix_2:
         count = 0
         for j in i:
@@ -88,7 +88,7 @@ def read_matrix():
     #print(flag)
 
     if flag is False:
-        print ("Error: Invalid input for the matrix")
+        print("Error: Invalid input for the matrix")
 
     #print(flag)
 
