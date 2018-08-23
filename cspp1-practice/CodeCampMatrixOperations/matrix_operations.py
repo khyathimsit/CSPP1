@@ -22,7 +22,7 @@ def mult_matrix(m_1, m_2, row_1, col_1, row_2):
     print("Error: Matrix shapes invalid for mult")
     return None
 
-def add_matrix(m_1, m_2, row_1, col_1, row_2, col_2):
+def add_matrix(m_1, m_2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -30,16 +30,27 @@ def add_matrix(m_1, m_2, row_1, col_1, row_2, col_2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    if row_1 == row_2 and col_1 == col_2:
-        add_res = []
-        for i_val in range(0, row_1):
-            a_temp = []
-            for j_val in range(0, col_1):
-                a_temp.append(m_1[i_val][j_val] + m_2[i_val][j_val])
-            add_res.append(a_temp)
-        return add_res
-    print("Error: Matrix shapes invalid for addition")
-    return None
+    # if row_1 == row_2 and col_1 == col_2:
+    #     add_res = []
+    #     for i_val in range(0, row_1):
+    #         a_temp = []
+    #         for j_val in range(0, col_1):
+    #             a_temp.append(m_1[i_val][j_val] + m_2[i_val][j_val])
+    #         add_res.append(a_temp)
+    #     return add_res
+    # print("Error: Matrix shapes invalid for addition")
+    # return None
+    l_1 = len(m_1)
+    l_2 = len(m_1[0])
+    if(l_1 == len(m_2) and l_2 == len(m_2[0])):
+        for i in range(l_1):
+            for j in range(len(l_2)):
+                m1[i][j] = int(m_1[i][j]) + int(m_2[i][j])
+        
+        return m_1
+    else:
+        print("Error: Matrix shapes invalid for addition")
+        return None
 
 def read_matrix():
     '''
