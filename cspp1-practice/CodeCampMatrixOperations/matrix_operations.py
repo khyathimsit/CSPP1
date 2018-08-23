@@ -65,13 +65,13 @@ def main():
     matrix_2 = []
     for i in range(0, n):
         matrix_1.append(list(map(int,input().split())))
-    #print(matrix_1)
+    print(matrix_1)
     
     k,l = input().split(',')
     k = int(k)
     for i in range(0, k):
         matrix_2.append(list(map(int,input().split())))
-    #print(matrix_2)
+    print(matrix_2)
     flag =True
     for i in matrix_1:
         count = 0
