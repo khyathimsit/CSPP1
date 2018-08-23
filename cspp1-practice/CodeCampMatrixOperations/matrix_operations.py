@@ -1,4 +1,4 @@
-def mult_matrix(m1, m2, n, m):
+def mult_matrix(m1, m2, n):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
