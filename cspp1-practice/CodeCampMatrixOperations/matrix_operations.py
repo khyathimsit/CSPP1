@@ -60,6 +60,7 @@ def main():
     # multiply matrix 1 and matrix 2
     n,m = input().split(',')
     n = int(n)
+    m = int(m)
 
     matrix_1 = []
     matrix_2 = []
@@ -69,6 +70,7 @@ def main():
     
     k,l = input().split(',')
     k = int(k)
+    l = int(l)
     for i in range(0, k):
         matrix_2.append(list(map(int,input().split())))
     #print(matrix_2)
@@ -79,7 +81,7 @@ def main():
             count += 1
         if count != m:
             flag = False
-    print(flag)
+    #print(flag)
     
     if flag == False:
         print ("Error: Invalid input for the matrix")
@@ -92,7 +94,7 @@ def main():
         if count != l:
             flag = False
 
-    print(flag)
+    #print(flag)
 
     if flag == False:
         print ("Error: Invalid input for the matrix")
