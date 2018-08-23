@@ -40,24 +40,14 @@ def add_matrix(m1, m2, n, m, k, l):
     else:
         return "Error: Matrix shapes invalid for addition"
 
-# def read_matrix():
-#     '''
-#         read the matrix dimensions from input
-#         create a list of lists and read the numbers into it
-#         in case there are not enough numbers given in the input
-#         print an error message and return None
-#         error message should be "Error: Invalid input for the matrix"
-#     '''
-    
-
-def main():
-    # read matrix 1
-
-    # read matrix 2
-
-    # add matrix 1 and matrix 2
-
-    # multiply matrix 1 and matrix 2
+def read_matrix():
+    '''
+        read the matrix dimensions from input
+        create a list of lists and read the numbers into it
+        in case there are not enough numbers given in the input
+        print an error message and return None
+        error message should be "Error: Invalid input for the matrix"
+    '''
     n,m = input().split(',')
     n = int(n)
     m = int(m)
@@ -105,6 +95,15 @@ def main():
         print(add_matrix(matrix_1, matrix_2, n, m, k, l))
         print(mult_matrix(matrix_1, matrix_2, n, m, k, l))
 
+def main():
+    # read matrix 1
 
+    # read matrix 2
+
+    # add matrix 1 and matrix 2
+
+    # multiply matrix 1 and matrix 2
+    read_matrix()
+    
 if __name__ == '__main__':
     main()
