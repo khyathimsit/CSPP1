@@ -99,6 +99,8 @@ def main():
     if flag == False:
         print ("Error: Invalid input for the matrix")
 
+    print(flag)
+
     if flag == True:
         print(add_matrix(matrix_1, matrix_2, n, m, k, l))
         print(mult_matrix(matrix_1, matrix_2, n, m, k, l))
