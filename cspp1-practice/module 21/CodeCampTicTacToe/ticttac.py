@@ -68,16 +68,16 @@ def main():
         print("invalid game")
         cnt += 1
     turn_x = 'x'
-    boolean_x = (horizontal(board,turn_x)
-             or vertical(board,turn_x)
-             or diagonal_frwd(board,turn_x)
-             or diagonal_back(board,turn_x))
+    boolean_x = (horizontal(board, turn_x)
+             or vertical(board, turn_x)
+             or diagonal_frwd(board, turn_x)
+             or diagonal_back(board, turn_x))
 
     turn_o = 'o'
-    boolean_o = (horizontal(board,turn_o)
-             or vertical(board,turn_o)
-             or diagonal_frwd(board,turn_o)
-             or diagonal_back(board,turn_o))
+    boolean_o = (horizontal(board, turn_o)
+             or vertical(board, turn_o)
+             or diagonal_frwd(board, turn_o)
+             or diagonal_back(board, turn_o))
     
     if boolean_x and boolean_o and cnt == 0:
         print("invalid game")
