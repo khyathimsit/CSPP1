@@ -42,7 +42,7 @@ def search(search_index, query):
     q_set = set()
     for i in q_list:
         if i in search_index:
-            val_ = search_index[i]:
+            val_ = search_index[i]
             for j in val_:
                 q_set.add(j[0])
     return q_set
