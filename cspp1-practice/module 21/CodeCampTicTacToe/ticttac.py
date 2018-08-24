@@ -42,6 +42,9 @@ def diagonal_frwd(board, turn):
     return False
 
 def diagonal_back(board, turn):
+    '''
+    Function for 2nd diagonal
+    '''
     cnt = 0
     j = 2
     for i in range(3):
@@ -53,6 +56,9 @@ def diagonal_back(board, turn):
     return False
 
 def main():
+    '''
+    Main function
+
     cnt = 0
     cnt_x = 0
     cnt_o = 0
