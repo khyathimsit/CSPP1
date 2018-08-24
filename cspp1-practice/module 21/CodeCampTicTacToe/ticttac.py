@@ -24,7 +24,7 @@ def diagonal_frwd(board, turn):
 	cnt = 0
 	for i in range(3):
 		if not board[i][i] == turn:
-				cnt += 1
+			cnt += 1
 	if cnt == 0:
 		return True
 	return False	
@@ -34,7 +34,7 @@ def diagonal_back(board, turn):
 	j = 2
 	for i in range(3):
 		if not board[i][i] == turn:
-				cnt += 1
+			cnt += 1
 		j -= 1
 	if cnt == 0:
 		return True
