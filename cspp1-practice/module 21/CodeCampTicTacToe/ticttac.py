@@ -50,7 +50,6 @@ def main():
     row_2 = input().split()
     row_3 = input().split()
     board = [row_1, row_2, row_3]
- 
     for i in range(3):
         for j in range(3):
             if board[i][j] == 'x':
@@ -78,7 +77,6 @@ def main():
                  or vertical(board, turn_o)
                  or diagonal_frwd(board, turn_o)
                  or diagonal_back(board, turn_o))
-    
     if boolean_x and boolean_o and cnt == 0:
         print("invalid game")
         cnt += 1
