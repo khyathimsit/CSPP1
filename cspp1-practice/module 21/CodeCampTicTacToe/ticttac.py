@@ -27,7 +27,7 @@ def diagonal_frwd(board, turn):
             cnt += 1
     if cnt == 0:
         return True
-    return False    
+    return False
 
 def diagonal_back(board, turn):
     cnt = 0
