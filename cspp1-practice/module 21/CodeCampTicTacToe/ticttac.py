@@ -62,10 +62,10 @@ def main():
  		    else:
  			    cnt_other += 1
     if cnt_other != 0:
-	    print("Invalid input")
+	    print("invalid input")
 	    cnt += 1
     elif cnt_x > cnt_o + 1 or cnt_o > cnt_x+1:
-	    print("Invalid game..")
+	    print("invalid game..")
 	    cnt += s1
     turn_x = 'x'
     boolean_x = (horizontal(board,turn_x)
@@ -78,17 +78,19 @@ def main():
 	         or vertical(board,turn_o)
 	         or diagonal_frwd(board,turn_o)
 	         or diagonal_back(board,turn_o))
+    if cnt == 0:
+   	    print("draw")
 
-    if boolean_x and boolean_o and cnt == 0:
-	    print("Invalid game")
-    if boolean_x and cnt == 0:
+    elif boolean_x and boolean_o and cnt == 0:
+	    print("invalid game")
+    elif boolean_x and cnt == 0:
 	    print(turn_x)
 	    cnt += 1
-    if boolean_o and cnt == 0:
+    elif boolean_o and cnt == 0:
         print(turn_o)
         cnt += 1
-    if cnt == 0:
-   	    print("Draw")
+    else:
+    	print("invalid game")
 
 if __name__ == '__main__':
 	main()
