@@ -78,19 +78,19 @@ def main():
 	         or vertical(board,turn_o)
 	         or diagonal_frwd(board,turn_o)
 	         or diagonal_back(board,turn_o))
-    if cnt == 0:
-   	    print("draw")
-
-    elif boolean_x and boolean_o and cnt == 0:
+    
+    if boolean_x and boolean_o and cnt == 0:
 	    print("invalid game")
-    elif boolean_x and cnt == 0:
+    if boolean_x and cnt == 0:
 	    print(turn_x)
 	    cnt += 1
-    elif boolean_o and cnt == 0:
+    if boolean_o and cnt == 0:
         print(turn_o)
         cnt += 1
-    else:
-    	print("invalid game")
+    if cnt == 0:
+   	    print("draw")
+    # else:
+    # 	print("invalid game")
 
 if __name__ == '__main__':
 	main()
