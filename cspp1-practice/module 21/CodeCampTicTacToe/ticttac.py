@@ -33,7 +33,7 @@ def diagonal_back(board, turn):
 	cnt = 0
 	j = 2
 	for i in range(3):
-		if not board[i][i] == turn:
+		if not board[i][j] == turn:
 			cnt += 1
 		j -= 1
 	if cnt == 0:
