@@ -81,6 +81,7 @@ def main():
     
     if boolean_x and boolean_o and cnt == 0:
 	    print("invalid game")
+	    cnt += 1
     if boolean_x and cnt == 0:
 	    print(turn_x)
 	    cnt += 1
