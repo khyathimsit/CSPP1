@@ -2,6 +2,9 @@
 Author: Khyathi
 '''
 def horizontal(board, turn):
+    '''
+    Function for row win
+    '''
     cnt = 0
     for i in range(3):
         for j in range(3):
