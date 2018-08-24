@@ -65,7 +65,7 @@ def main():
 	    print("invalid input")
 	    cnt += 1
     elif cnt_x > cnt_o + 1 or cnt_o > cnt_x+1:
-	    print("invalid game..")
+	    print("invalid game")
 	    cnt += 1
     turn_x = 'x'
     boolean_x = (horizontal(board,turn_x)
