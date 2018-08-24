@@ -58,6 +58,7 @@ def diagonal_back(board, turn):
 def main():
     '''
     Main function
+    '''
 
     cnt = 0
     cnt_x = 0
