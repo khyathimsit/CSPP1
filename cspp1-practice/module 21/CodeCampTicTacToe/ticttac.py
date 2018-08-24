@@ -16,6 +16,9 @@ def horizontal(board, turn):
     return False
 
 def vertical(board, turn):
+    '''
+    Function for vertical win..
+    '''
     cnt = 0
     for i in range(3):
         for j in range(3):
@@ -27,6 +30,9 @@ def vertical(board, turn):
     return False
 
 def diagonal_frwd(board, turn):
+    '''
+    Function for one diagonal win
+    '''
     cnt = 0
     for i in range(3):
         if not board[i][i] == turn:
