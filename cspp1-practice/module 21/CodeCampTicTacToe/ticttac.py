@@ -90,9 +90,6 @@ if boolean_o and cnt == 0:
 if cnt == 0:
    	print("Draw")
 
-if __name__ = '__main__':
+if __name__ == '__main__':
 	main()
 	
-
-
-
