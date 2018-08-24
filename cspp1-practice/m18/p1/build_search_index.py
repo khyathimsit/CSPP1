@@ -85,7 +85,7 @@ def build_search_index(docs):
     #     dict_1[k] = v
     # print (dict_1)
 
-     for doc_id, doc in enumerate(doc_list):
+    for doc_id, doc in enumerate(doc_list):
         for word in doc:
             if word in dict_1:
                 dict_1[word].append((doc_id, doc_list[doc_id][word]))
