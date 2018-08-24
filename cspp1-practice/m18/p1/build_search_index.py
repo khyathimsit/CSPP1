@@ -55,7 +55,7 @@ def word_list(text):
         if i in key_list:
             list_1.remove(i)
     #print(list_1)
-    return build_search_index(list_1)
+    return list_1
 
 def build_search_index(docs):
     '''
@@ -74,21 +74,35 @@ def build_search_index(docs):
 
     # return search index
     dict_1 = {}
+    doc_list = docs
+    len_doc_list = len(doc_list)
+
+    for i in range(len_doc_list):
+        doc_list[i] = word_list(doc_list[i])
+        doc_list[i] = collections.Counter(doc_list[i])
+
     # for k,v in enumerate(docs):
     #     dict_1[k] = v
     # print (dict_1)
-    for k in docs:
-        if k not in dict_1:
-            dict_1[k] = 1
-        else:
-            dict_1[k] += 1
+
+     for doc_id, doc in enumerate(doc_list):
+        for word in doc:
+            if word in dict_1:
+                dict_1[word].append((doc_id, doc_list[doc_id][word]))
+            else:
+                dict_1[word] = [(doc_id, doc_list[doc_id][word])]
+    # for k in docs:
+    #     if k not in dict_1:
+    #         dict_1[k] = 1
+    #     else:
+    #         dict_1[k] += 1
     #print(dict_1)
 
     # for k in dict_1:
     #     if k not in dict_2:
     #         x = (docs.index(k), 1)
     # return print_search_index(list_2)
-    return print_search_index(dict_1)
+    return dict_1
 
 # helper function to print the search index
 # use this to verify how the search index looks
@@ -114,12 +128,12 @@ def main():
         documents.append(input())
         i += 1
     #print(documents)
-    docs = ' '.join(documents)
+    #docs = ' '.join(documents)
     #print(docs)
-    print(word_list(docs))
+    #print(word_list(docs))
 
     # call print to display the search index
-    #print_search_index(build_search_index(documents))
+    print_search_index(build_search_index(documents))
 
 if __name__ == '__main__':
     main()
