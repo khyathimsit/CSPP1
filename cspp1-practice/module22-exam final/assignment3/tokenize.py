@@ -13,7 +13,7 @@ def main():
     wordlist = string.split()
     #print(wordlist)
     wordfreq = [wordlist.count(word) for word in wordlist]
-    dict_1 = dict(wordlist, wordfreq)
+    dict_1 = dict(zip(wordlist, wordfreq))
     print(dict_1)
     
 if __name__ == '__main__':
