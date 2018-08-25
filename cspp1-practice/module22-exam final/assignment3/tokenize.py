@@ -7,6 +7,9 @@ each word
 
 import re
 def main():
+    '''
+    Main function
+    '''
     input_1 = int(input())
     #string = input()
     string = ""
