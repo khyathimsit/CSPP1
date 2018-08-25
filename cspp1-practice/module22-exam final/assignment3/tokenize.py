@@ -5,7 +5,7 @@ each word
 
 # def tokenize(string):
 #     pass
-            
+import re        
 def main():
     input_1 = int(input())
     #string = input()
