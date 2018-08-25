@@ -24,10 +24,10 @@ def check_sudoku(sudoku):
                     cnt_col = cnt_col + 1
                 j = j+1
             if cnt_row != 1 or cnt_col != 1:
-                return False
+                return True
             i = i +1
         num = num + 1
-    return True
+    return False
 
 def main():
     '''
