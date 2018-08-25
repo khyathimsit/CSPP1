@@ -9,10 +9,9 @@ def print_dictionary(dictionary):
     x = sorted(dictionary)
     #print(x)
     #print(dictionary)
-    
-    for i in range(len(dictionary)):
-    	for i in x:
-     	    print(i, '-', dictionary[i])
+    for i in x:
+    #for i in dictionary:
+    	print(i, '-', dictionary[i])
 
 
 def main():
