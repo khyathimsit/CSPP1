@@ -6,12 +6,12 @@ the key and frequency with a SPACE - SPACE.
 
 def print_dictionary(dictionary):
     #list_1 = []
-    x = sorted(dictionary)
+    x_1 = sorted(dictionary)
     #print(x)
     #print(dictionary)
-    for i in x:
+    for i_1 in x_1:
     #for i in dictionary:
-    	print(i, '-', dictionary[i])
+    	print(i_1, '-', dictionary[i_1])
 
 
 def main():
