@@ -3,6 +3,9 @@ Author: Khyathi
 '''
 import re
 def clean_string(string):
+    '''
+    Function to remove the special characters from a given string
+    '''
     #string_1 = ""
     string_1 = re.sub('[^A-Za-z0-9]+', '', string)
     return string_1
