@@ -12,6 +12,7 @@ def main():
     string = ""
     for _ in range(input_1):
         string += input() + "\n"
+    string_1 = re.sub('[^A-Za-z0-9]+', '', string)
     wordlist = []
     wordlist = string.split()
     #print(wordlist)
