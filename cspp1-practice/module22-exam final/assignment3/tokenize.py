@@ -7,7 +7,7 @@ each word
 #     pass
             
 def main():
-    input_1 = int(input)
+    input_1 = int(input())
     string = input()
     wordlist = []
     wordlist = string.split()
