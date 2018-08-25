@@ -14,7 +14,7 @@ def main():
         string += input() + "\n"
     string_1 = re.sub('[^A-Za-z0-9]+', '', string)
     wordlist = []
-    wordlist = string.split()
+    wordlist = string_1.split()
     #print(wordlist)
     wordfreq = [wordlist.count(word) for word in wordlist]
     dict_1 = dict(zip(wordlist, wordfreq))
