@@ -9,9 +9,9 @@ def clean_string(string):
    return string_1
 
 def main():
-	'''
-	Main Function
-	'''
+    '''
+    Main Function
+    '''
     string = input()
     print(clean_string(string))
 
