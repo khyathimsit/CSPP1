@@ -2,10 +2,10 @@
 Write a function to tokenize a given string and return a dictionary with the frequency of
 each word
 '''
-
 # def tokenize(string):
 #     pass
-import re        
+
+import re
 def main():
     input_1 = int(input())
     #string = input()
@@ -21,6 +21,6 @@ def main():
     wordfreq = [wordlist.count(word) for word in wordlist]
     dict_1 = dict(zip(wordlist, wordfreq))
     print(dict_1)
-    
+
 if __name__ == '__main__':
     main()
