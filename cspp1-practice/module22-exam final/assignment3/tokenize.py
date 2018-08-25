@@ -8,7 +8,10 @@ each word
             
 def main():
     input_1 = int(input())
-    string = input()
+    #string = input()
+    string = ""
+    for _ in range(input_1):
+        string += input() + "\n"
     wordlist = []
     wordlist = string.split()
     #print(wordlist)
